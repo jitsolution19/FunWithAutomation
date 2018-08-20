@@ -1,5 +1,6 @@
 package bigbasket.com;
 
+
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
@@ -17,6 +18,10 @@ public class SearchProduct {
 		driver.get("https://www.bigbasket.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		CitySelection objcity= new CitySelection(driver);
+		objcity.selectCity("Pune", "411014");
+		
 		String MainProduct[] = {"Snacks & Branded Foods","Fruits & Vegetables","Fruits & Vegetables","Fruits & Vegetables"};
 		String Product[] = {"Indian Mithai","Herbs & Seasonings","Fresh Vegetables","Fresh Fruits"};
 		Search_FreshVegetables veg = new Search_FreshVegetables(driver);
@@ -27,5 +32,6 @@ public class SearchProduct {
 			counter++;
 		}
 		driver.quit();
+		
 	}
 }
