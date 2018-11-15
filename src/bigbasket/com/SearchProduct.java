@@ -12,7 +12,7 @@ public class SearchProduct {
 	public void launchbrowserandsearchproduct() throws Exception
 	{
 		System.out.println("Launch Application");
-		System.setProperty("webdriver.chrome.driver", "B:\\Automation\\software\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium_Project\\browserdriver\\chromedriver_win32\\chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.bigbasket.com/");
