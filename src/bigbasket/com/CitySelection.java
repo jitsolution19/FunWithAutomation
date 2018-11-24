@@ -51,9 +51,6 @@ public class CitySelection {
 		
 		areaInputbox.clear();
 		areaInputbox.sendKeys(pincode);
-//		Thread.sleep(2000);
-//		areaInputbox.sendKeys(Keys.ARROW_DOWN);
-//		areaInputbox.click();
 		ContinueButton.click();
 		Thread.sleep(2000);
 	}
