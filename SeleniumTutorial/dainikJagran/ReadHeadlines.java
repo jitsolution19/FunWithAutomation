@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -20,10 +21,12 @@ public class ReadHeadlines {
 	@Test()
 	public void readHeadline()
 	{
-		System.setProperty("webdriver.gecko.driver","E:\\Selenium_Project\\browserdriver\\geckodriver-v0.22.0-win64\\geckodriver.exe");
-		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		capabilities.setCapability("Marionette", false);
-		WebDriver driver = new FirefoxDriver(capabilities);
+		System.setProperty("webdriver.chrome.driver","E:\\Selenium_Project\\browserdriver\\chromedriver_win32\\chromedriver.exe");
+//		System.setProperty("webdriver.gecko.driver","E:\\Selenium_Project\\browserdriver\\geckodriver-v0.22.0-win64\\geckodriver.exe");
+//		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+//		capabilities.setCapability("Marionette", false);
+//		WebDriver driver = new FirefoxDriver(capabilities);
+		WebDriver driver =new ChromeDriver();
 		driver.navigate().to("https://www.jagran.com/");
 		driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
 		System.out.println("Done");
